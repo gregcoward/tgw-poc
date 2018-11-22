@@ -1030,7 +1030,7 @@
                 ]
               ]
             },
-            "DeviceIndex": "1",
+            "DeviceIndex": "0",
             "GroupSet": [
               {
                 "Ref": "Webserver2SecurityGroup"
@@ -1318,6 +1318,14 @@
                         ]
                       },
                       "'\n",
+                      "POOLMEM2='",
+                      {
+                        "Fn::GetAtt": [
+                          "Webserver2",
+                          "PrivateIp"
+                        ]
+                      },
+                      "'\n",
                       "POOLMEMPORT=80\n",
                       "APPNAME='demo-app-1'\n",
                       "VIRTUALSERVERPORT=80\n",
@@ -1330,7 +1338,7 @@
                       "echo 'starting custom-config.sh'\n",
                       "tmsh+=(\n",
                       "\"tmsh modify net self-allow defaults add { tcp:6123 tcp:6124 tcp:6125 tcp:6126 tcp:6127 tcp:6128 }\"\n",
-                      "\"tmsh create ltm pool ${APPNAME}-pool members add { ${POOLMEM}:${POOLMEMPORT} } monitor http\"\n",
+                      "\"tmsh create ltm pool ${APPNAME}-pool members add { ${POOLMEM}:${POOLMEMPORT} ${POOLMEM2}:${POOLMEMPORT} } monitor http\"\n",
                       "\"curl -s -f --retry 20 -o /home/admin/asm-policy-linux-high.xml http://cdn.f5.com/product/templates/utils/asm-policy-linux-high.xml\"\n",
                       "\"tmsh load asm policy file /home/admin/asm-policy-linux-high.xml\"\n",
                       "\"tmsh modify asm policy /Common/linux-high active\"\n",
