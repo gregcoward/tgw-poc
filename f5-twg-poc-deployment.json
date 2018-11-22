@@ -64,7 +64,7 @@
         ]
       }
     },
-    "Bigip1Url": {
+    "Bigip1MgmtUrl": {
       "Description": "BIG-IP Management GUI",
       "Value": {
         "Fn::Join": [
@@ -78,6 +78,25 @@
               ]
             },
             ":8443"
+          ]
+        ]
+      }
+    },
+    "Bigip1SSh": {
+      "Description": "BIG-IP SSH Connection String",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "ssh -i \"",
+            { "Ref": "sshKey" },
+            "\" admin@",
+            {
+              "Fn::GetAtt": [
+                "Bigip1Instance",
+                "PublicIp"
+              ]
+            }
           ]
         ]
       }
