@@ -1030,7 +1030,7 @@
                 ]
               ]
             },
-            "DeviceIndex": "0",
+            "DeviceIndex": "1",
             "GroupSet": [
               {
                 "Ref": "Webserver2SecurityGroup"
