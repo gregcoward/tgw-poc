@@ -1,5 +1,4 @@
-# F5 WAF with AWS TGW POC
-
+# F5 Advanced WAF with AWS Transit Gateway POC
 
 ## Introduction
 
