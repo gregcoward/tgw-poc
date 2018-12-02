@@ -298,7 +298,7 @@
     },
     "SecuritySubnet": {
       "Properties": {
-        "AvailabilityZone": "us-east-2a",
+        "AvailabilityZone": "us-east-1a",
         "CidrBlock": "10.0.1.0/24",
         "Tags": [
           {
@@ -388,7 +388,7 @@
     },
     "ApplicationSubnet": {
       "Properties": {
-        "AvailabilityZone": "us-east-2a",
+        "AvailabilityZone": "us-east-1a",
         "CidrBlock": "172.31.1.0/24",
         "Tags": [
           {
@@ -478,7 +478,7 @@
     },
     "Application2Subnet": {
       "Properties": {
-        "AvailabilityZone": "us-east-2a",
+        "AvailabilityZone": "us-east-1a",
         "CidrBlock": "192.168.1.0/24",
         "Tags": [
           {
