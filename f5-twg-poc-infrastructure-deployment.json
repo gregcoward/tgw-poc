@@ -1537,7 +1537,7 @@
         "IamInstanceProfile": {
           "Ref": "bigipServiceDiscoveryProfile"
         },
-        "ImageId": "ami-0c2bf91cae8ee4908",
+        "ImageId": "ami-0caf7ba667be41fd2",
         "InstanceType": "t2.large",
         "KeyName": {
           "Ref": "sshKey"
