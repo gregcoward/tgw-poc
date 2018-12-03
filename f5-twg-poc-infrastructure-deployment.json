@@ -810,7 +810,7 @@
     },
     "Webserver": {
       "Properties": {
-        "ImageId": "ami-01f77b0e5db3bd6fb",
+        "ImageId": "ami-0d1c4f8aa51e723b3",
         "InstanceType": "t2.micro",
         "KeyName": {
           "Ref": "sshKey"
@@ -1011,7 +1011,7 @@
     },
     "Webserver2": {
       "Properties": {
-        "ImageId": "ami-01f77b0e5db3bd6fb",
+        "ImageId": "ami-0d1c4f8aa51e723b3",
         "InstanceType": "t2.micro",
         "KeyName": {
           "Ref": "sshKey"
@@ -1366,7 +1366,7 @@
                 },
                 "group": "root",
                 "mode": "000755",
-                "owner":s "root"
+                "owner": "root"
               },
               "/config/cloud/aws/f5.cloud_logger.v1.0.0.tmpl": {
                 "group": "root",
@@ -1537,7 +1537,7 @@
         "IamInstanceProfile": {
           "Ref": "bigipServiceDiscoveryProfile"
         },
-        "ImageId": "ami-0caf7ba667be41fd2",
+        "ImageId": "ami-017ea320ccba8a35e",
         "InstanceType": "t2.large",
         "KeyName": {
           "Ref": "sshKey"
